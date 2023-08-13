@@ -4,11 +4,11 @@ def prime_factor(x):
     count = 0
     result = []
     
-    for i in range(2, quotient+1):
+    for i in range(2, quotient + 1):
     
         while (quotient % i == 0):
             count += 1
-            quotient = int(quotient / i)
+            quotient = quotient // i
             
         if quotient == 1:
             result.append([i, count])
