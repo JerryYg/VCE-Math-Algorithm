@@ -1,5 +1,6 @@
 from math import pow
 def sieve_prime(n):
+    '''Algorithm (Sieve of Eratosthenes) for finding all the prime numbers up to a natural number n'''
     p_list = [] # container list for primes no larger than square root of n
     n_list = [] 
     for n in range(2, n + 1):
@@ -11,5 +12,5 @@ def sieve_prime(n):
                 n_list.remove(item) # remove all items which are multiple of the first item 
         p_list.append(n_list.pop(0)) # remove first item (a prime) and add it to p_list
         
-    return p_list + n_list # p_list are all primes no larger than square root of n; n_list are those larger than
+    return p_list + n_list # p_list are all primes no larger than square root of n; n_list are those larger than.
         
